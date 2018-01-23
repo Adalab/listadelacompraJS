@@ -2,11 +2,11 @@
 Mi primera lista de la compra, ¡Chispas!
 
 ## Error en la aplicación
-Hoy nos toca comprar y nuestra aplicación favorita nos ha enviado, por error, en un array. ¿No podían mandarla en un mail, como todo el mundo?
+Hoy nos toca comprar y nuestra aplicación favorita nos ha enviado la lista de la compra, por error, en un array. ¿No podían mandarla en un mail, como todo el mundo?
 
-Pero no pasa nada porque sabemos JavasCript y ya lo ponemos en condiciones nosotras. Claro que sí!
+Pero no pasa nada porque sabemos JavaScript y ya lo ponemos en condiciones nosotras. ¡Claro que sí!
 
-```JavasCript
+```js
 const shoppingList = [
   {
     product: "Cereales con chocolate",
@@ -40,12 +40,12 @@ const shoppingList = [
 ```
 
 Nos hemos venido un poco arriba y vamos a hacernos dos funciones:
-- `printMyShoppingList` que nos sacará en nuestro index.html un listado con los siguientes campos por producto:
+- `printMyShoppingList` que nos sacará en nuestro `index.html` un listado con los siguientes campos por producto:
 	- Nombre
 	- Precio/unidad
 	- Cantidad
 	- Precio total
-- `totalPrice` que, al hacer clic en el botón "Calcular precio total", nos mostrará cuánto dinero debemos llevar para poder pagar nuestra compra.
+- `calculateTotalPrice` que, al hacer clic en el botón "Calcular precio total", nos mostrará cuánto dinero debemos llevar para poder pagar nuestra compra.
 
 ## FAQ
 1. **¿Tenemos que darle estilos para que quede bonito?** No, a lo espartano.
