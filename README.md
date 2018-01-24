@@ -37,7 +37,7 @@ const shoppingList = [
     price: 3
   }
 ];
-```
+
 
 Nos hemos venido un poco arriba y vamos a hacernos dos funciones:
 - `printMyShoppingList` que nos sacará en nuestro `index.html` un listado con los siguientes campos por producto:
