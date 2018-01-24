@@ -39,7 +39,7 @@ var shoppingList = [
 
 
 for (var i = 0; i < shoppingList.length; i++) {
-	console.log("Hola shoppingList");
+
 	menuLi += '<li class="menu-item">' + shoppingList[i].product + '</li>';
 	menuLi += '<li class="menu-item">' + shoppingList[i].price + '</li>';
 	menuLi += '<li class="menu-item">' + shoppingList[i].quantity + '</li>';
@@ -52,18 +52,11 @@ productsList.innerHTML = menuLi;
 function totalPrice(){
     var total = 0;
     for(var i = 0; i < shoppingList.length; i++){
-        total += shoppingList.list[i].price;
+        total += shoppingList[i].price * shoppingList[i].quantity;
     }
-    return total;
+
+		result.innerHTML = total;
   };
 
-// buttonShop.addEventListener('click', totalPrice);
 
-// function totalPrice() {
-// 	// Calculo del subtotal
-// 	var subtotal = quantity * price;
-// 	inputtext.value =	subtotal;
-// 	//Actualizar el total
-// 	var total = eval(totaltext.value);
-// 	totaltext.value = total + subtotal;
-// }
+buttonShop.addEventListener('click', totalPrice);
