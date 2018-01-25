@@ -37,18 +37,34 @@ var shoppingList = [
   }
 ];
 
+var listShop = shoppingList.map(function() {
 
-for (var i = 0; i < shoppingList.length; i++) {
+ for (var i = 0; i < shoppingList.length; i++) {
 
-	menuLi += '<li class="menu-item">' + shoppingList[i].product + '</li>';
-	menuLi += '<li class="menu-item">' + shoppingList[i].price + '</li>';
-	menuLi += '<li class="menu-item">' + shoppingList[i].quantity + '</li>';
-	menuLi += '<li class="menu-item">' + shoppingList[i].price * shoppingList[i].quantity + '</li>';
+	menuLi += '<li class="menu-item">Nombre: ' + shoppingList[i].product + '</li>';
+	menuLi += '<li class="menu-item">Precio: ' + shoppingList[i].price + ' €</li>';
+	menuLi += '<li class="menu-item">Cantidad: ' + shoppingList[i].quantity + '</li>';
+	menuLi += '<li class="menu-item">Total: ' + shoppingList[i].price * shoppingList[i].quantity + ' €</li>';
 
-}
+  }
+});
 
 productsList.innerHTML = menuLi;
 
+
+// for (var i = 0; i < shoppingList.length; i++) {
+//
+// 	menuLi += '<li class="menu-item">Nombre: ' + shoppingList[i].product + '</li>';
+// 	menuLi += '<li class="menu-item">Precio: ' + shoppingList[i].price + ' €</li>';
+// 	menuLi += '<li class="menu-item">Cantidad: ' + shoppingList[i].quantity + '</li>';
+// 	menuLi += '<li class="menu-item">Total: ' + shoppingList[i].price * shoppingList[i].quantity + ' €</li>';
+//
+// }
+//
+// productsList.innerHTML = menuLi;
+
+
+//CALCULAR EL TOTAL
 function totalPrice(){
     var total = 0;
     for(var i = 0; i < shoppingList.length; i++){
