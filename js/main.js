@@ -3,7 +3,7 @@
 var buttonShop = document.querySelector('.calculator');
 var productsList = document.querySelector('.list');
 var result = document.querySelector('.result');
-var menuLi = '';
+
 
 
 var shoppingList = [
@@ -37,31 +37,37 @@ var shoppingList = [
   }
 ];
 
-var listShop = shoppingList.map(function() {
 
- for (var i = 0; i < shoppingList.length; i++) {
+function shopList(){
+  var menuLi = '';
 
-	menuLi += '<li class="menu-item">Nombre: ' + shoppingList[i].product + '</li>';
-	menuLi += '<li class="menu-item">Precio: ' + shoppingList[i].price + ' €</li>';
-	menuLi += '<li class="menu-item">Cantidad: ' + shoppingList[i].quantity + '</li>';
-	menuLi += '<li class="menu-item">Total: ' + shoppingList[i].price * shoppingList[i].quantity + ' €</li>';
+  for (var i = 0; i < shoppingList.length; i++) {
 
-  }
-});
+    menuLi += '<li class="menu">Nombre: ' + shoppingList[i].product + '</li>' + '<li class="menu">Precio: ' +  shoppingList[i].price + '</li>' + '<li class="menu">Cantidad: ' + shoppingList[i].quantity + '</li>' + '<li class="menu">Total: '+ shoppingList[i].price * shoppingList[i].quantity +  '</li>';
+
+  };
 
 productsList.innerHTML = menuLi;
+}
+
+shopList();
 
 
-// for (var i = 0; i < shoppingList.length; i++) {
+
+
+//  for (var i = 0; i < shoppingList.length; i++) {
 //
-// 	menuLi += '<li class="menu-item">Nombre: ' + shoppingList[i].product + '</li>';
-// 	menuLi += '<li class="menu-item">Precio: ' + shoppingList[i].price + ' €</li>';
-// 	menuLi += '<li class="menu-item">Cantidad: ' + shoppingList[i].quantity + '</li>';
-// 	menuLi += '<li class="menu-item">Total: ' + shoppingList[i].price * shoppingList[i].quantity + ' €</li>';
+// 	menuLi += '<li class="menu>Nombre: ' + shoppingList[i].product + '</li>';
+// 	menuLi += '<li class="menu">Precio: ' + shoppingList[i].price + ' €</li>';
+// 	menuLi += '<li class="menu">Cantidad: ' + shoppingList[i].quantity + '</li>';
+// 	menuLi += '<li class="menu">Total: ' + shoppingList[i].price * shoppingList[i].quantity + ' €</li>';
 //
-// }
+//   }
 //
 // productsList.innerHTML = menuLi;
+
+
+
 
 
 //CALCULAR EL TOTAL
