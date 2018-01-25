@@ -37,32 +37,23 @@ var shoppingList = [
 ];
 
 for (var i = 0; i < shoppingList.length; i++) {
-	list += '<li class="elements">' + shoppingList[i].product + '</li>';
-	list += '<li class="elements">' + shoppingList[i].price + '</li>';
-	list += '<li class="elements">' + shoppingList[i].quantity + '</li>';
-	list += '<li class="elements">' + shoppingList[i].price * shoppingList[i].quantity + '</li>';
+	list += '<br>';
+	list += '<li class="elements"><h3 class="product">Producto: ' + shoppingList[i].product + '</h3></li>';
+	list += '<li class="elements"><p class="price">Precio unitario: ' + shoppingList[i].price + '</p></li>';
+	list += '<li class="elements"><p class="quantity">Cantidad: ' + shoppingList[i].quantity + '</p></li>';
+	list += '<li class="elements"><p class="totalprice">Total: <p class="textTotalPrice">' + shoppingList[i].price * shoppingList[i].quantity + '</p></p></li>';
+
 };
 
 shopList.innerHTML = list;
 
-buttonPrice.addEventListener('click', totalPrice);
+buttonPrice.addEventListener('click', sumPrice);
 
 
-shoppingList = function totalPrice(){
-	var totalprecio = 0;
+function sumPrice(){
+	var totalShopping = 0;
 	for (var i = 0; i < shoppingList.length; i++) {
-			totalprecio += shoppinList[i].price;
+			totalShopping += shoppingList[i].price * shoppingList[i].quantity;
 	}
-	return totalprecio;
+	resultPrice.innerHTML = totalShopping;
 };
-
-
-// function totalPrice(){
- // for (var i = 0; i < shoppingList.length; i++) {
- //  var subtotal = shoppingList[i].price * shoppingList[i].quantity;
- //  var total =
- //  console.log('sale el precio?');
- // };
-// };
-
-totalPrice.innerHTML = resultPrice;

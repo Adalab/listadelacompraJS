@@ -1,0 +1,44 @@
+.div {
+	margin: 20px;
+}
+
+.shopList {
+	list-style: none;
+}
+
+.buttonPrice {
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	border-radius: 30px;
+	border: 1px solid #00BA8E;
+	color: #00BA8E;
+	transition: all 0.25s ease;
+}
+  .buttonPrice:hover {
+    color: white;
+    background: #00BA8E;
+}
+
+.resultPrice {
+	margin-top: 20px;
+	border: 1px solid black;
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	
+}
+
+.product, .price, .quantity, .totalprice {
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+.totalprice {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.textTotalPrice {
+	color: red;
+}
