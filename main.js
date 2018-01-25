@@ -36,6 +36,13 @@ var shoppingList = [
   }
 ];
 
+var functionPaintArray = shoppingList.map (function(newArray){
+		return newArray.innerHTML = list;
+
+});
+
+console.log(functionPaintArray);
+
 for (var i = 0; i < shoppingList.length; i++) {
 	list += '<br>';
 	list += '<li class="elements"><h3 class="product">Producto: ' + shoppingList[i].product + '</h3></li>';
@@ -45,7 +52,7 @@ for (var i = 0; i < shoppingList.length; i++) {
 
 };
 
-shopList.innerHTML = list;
+// shopList.innerHTML = list;
 
 buttonPrice.addEventListener('click', sumPrice);
 
