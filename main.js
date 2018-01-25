@@ -1,7 +1,6 @@
 'use strict';
 
 var shopList = document.querySelector ('.shopList');
-var list = '';
 var buttonPrice = document.querySelector ('.buttonPrice');
 var resultPrice = document.querySelector ('.resultPrice');
 
@@ -35,24 +34,17 @@ var shoppingList = [
     price: 3
   }
 ];
-
-var functionPaintArray = shoppingList.map (function(newArray){
-		return newArray.innerHTML = list;
-
-});
-
-console.log(functionPaintArray);
-
-for (var i = 0; i < shoppingList.length; i++) {
-	list += '<br>';
-	list += '<li class="elements"><h3 class="product">Producto: ' + shoppingList[i].product + '</h3></li>';
-	list += '<li class="elements"><p class="price">Precio unitario: ' + shoppingList[i].price + '</p></li>';
-	list += '<li class="elements"><p class="quantity">Cantidad: ' + shoppingList[i].quantity + '</p></li>';
-	list += '<li class="elements"><p class="totalprice">Total: <p class="textTotalPrice">' + shoppingList[i].price * shoppingList[i].quantity + '</p></p></li>';
-
+function paintListHtml(){
+	var list = '';
+	for (var i = 0; i < shoppingList.length; i++) {
+		list += '<li class="elements"><h3 class="product">Producto: ' + shoppingList[i].product + '</h3><p class="price">Precio unitario: ' + shoppingList[i].price + '</p><p class="quantity">Cantidad: ' + shoppingList[i].quantity + '</p><p class="totalprice">Total: <p class="textTotalPrice">' + shoppingList[i].price * shoppingList[i].quantity + '</p></p></li>';
+	};
+	shopList.innerHTML = list;
 };
 
-// shopList.innerHTML = list;
+paintListHtml();
+
+
 
 buttonPrice.addEventListener('click', sumPrice);
 
