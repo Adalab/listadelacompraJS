@@ -43,7 +43,7 @@ function shopList(){
 
   for (var i = 0; i < shoppingList.length; i++) {
 
-    menuLi += '<li class="menu">Nombre: ' + shoppingList[i].product + '</li>' + '<li class="menu">Precio: ' +  shoppingList[i].price + '</li>' + '<li class="menu">Cantidad: ' + shoppingList[i].quantity + '</li>' + '<li class="menu">Total: '+ shoppingList[i].price * shoppingList[i].quantity +  '</li>';
+    menuLi += '<li class="menu"><ul class="listDetails"><li class="name">' + shoppingList[i].product + '</li>' + '<li class="menu">Precio:  ' +  shoppingList[i].price + ' €</li>' + '<li class="menu">Cantidad: ' + shoppingList[i].quantity + '</li>' + '<li class="menu">Total: '+ shoppingList[i].price * shoppingList[i].quantity + ' €</ul></li>';
 
   };
 
@@ -51,8 +51,6 @@ productsList.innerHTML = menuLi;
 }
 
 shopList();
-
-
 
 
 //  for (var i = 0; i < shoppingList.length; i++) {
@@ -65,9 +63,6 @@ shopList();
 //   }
 //
 // productsList.innerHTML = menuLi;
-
-
-
 
 
 //CALCULAR EL TOTAL
