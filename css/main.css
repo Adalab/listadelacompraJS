@@ -23,8 +23,18 @@
 	color: white;
 }
 
+.calculator:hover {
+	background: white;
+	color: #3FB180;
+	font-size: 20px;
+	box-shadow: inset 0 0 0 3px #3FB180;
+}
+
 .result {
 	margin-left: 100px;
 	padding-top: 20px;
 	font-weight: bold;
+	color: red;
+	font-size: 24px;
+		
 }
