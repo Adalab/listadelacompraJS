@@ -37,14 +37,15 @@ var shoppingList = [
   }
 ];
 
+function shoppList(){
 var menuLi = '';
 var listShop = shoppingList.map(function(shop) {
-
-	menuLi += '<li class="menu"><ul class="listDetails"><li class="name">' + shop.product + '</li>' + '<li class="menu">Precio:  ' +  shop.price + ' €</li>' + '<li class="menu">Cantidad: ' + shop.quantity + '</li>' + '<li class="menu">Total: '+ shop.price * shop.quantity + ' €</ul></li>';
-
-});
-
+	return menuLi += '<li class="menu"><ul class="listDetails"><li class="name">' + shop.product + '</li>' + '<li class="menu">Precio:  ' +  shop.price + ' €</li>' + '<li class="menu">Cantidad: ' + shop.quantity + '</li>' + '<li class="menu">Total: '+ shop.price * shop.quantity + ' €</ul></li>';
+	});
 productsList.innerHTML = menuLi;
+};
+shoppList();
+
 
 // function shopList(){
 //   var menuLi = '';
