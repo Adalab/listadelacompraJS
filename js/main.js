@@ -53,13 +53,3 @@ const totalPrice = () => {
 	result.innerHTML = total;
 }
 buttonShop.addEventListener('click', totalPrice);
-
-
-// let total = 0;
-// buttonShop.addEventListener('click',(){
-//
-// 	for (const totalPrice of shoppingList) {
-// 		total += `${totalPrice.price} * ${totalPrice.quantity}`;
-// 	}
-// 	result.innerHTML = total;
-// });
