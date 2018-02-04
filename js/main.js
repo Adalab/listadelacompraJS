@@ -38,17 +38,27 @@ const shoppingList = [
 let menuLi = '';
 const shopList = () => {
 	for (const list of shoppingList) {
-		menuLi += `<li class="menu"><ul class="listDetails"><li class="name"> ${list.product}</li><li class="menu">Precio: ${list.price} €</li><li class="menu">Cantidad: ${list.quantity}</li><li class="menu">Total: ${list.price} * ${list.quantity} €</ul></li>`
+		menuLi += `
+			<li class="menu">
+				<ul class="listDetails">
+					<li class="name"> ${list.product}</li>
+					<li class="menu">Precio: ${list.price} €</li>
+					<li class="menu">Cantidad: ${list.quantity}</li>
+					<li class="menu">Total: ${list.price} * ${list.quantity} €</li>
+				</ul>
+			</li>`
+
 	};
 	productsList.innerHTML = menuLi;
 }
 shopList();
 
 // CALCULAR EL PRECIO TOTAL
-let total = 0;
+
 const totalPrice = () => {
+	let total = 0;
 	for (const prices of shoppingList) {
-		total += `${prices.price} * ${prices.price}`;
+		total += prices.quantity * prices.price;
 	}
 	result.innerHTML = total;
 }
