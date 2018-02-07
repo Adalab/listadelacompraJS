@@ -1,43 +1,52 @@
 'use strict';
 
-var shopList = document.querySelector ('.shopList');
-var buttonPrice = document.querySelector ('.buttonPrice');
-var resultPrice = document.querySelector ('.resultPrice');
+const shopList = document.querySelector ('.shopList');
+const buttonPrice = document.querySelector ('.buttonPrice');
+const resultPrice = document.querySelector ('.resultPrice');
 
-var shoppingList = [
-  {
-    product: "Cereales con chocolate",
-    description: "Cereales rellenos de chocolate",
-    quantity: 2,
-    category: "Cereales",
-    price: 4.5
-  },
-  {
-    product:"Hamburguesa doble con queso y bacon",
-    description: "Hamburguesa rica y saludable #no",
-    quantity: 1,
-    category: "Fast-food",
-    price: 18.95
-  },
-  {
-    product: "Agua mineral",
-    description: "Agua de un charco del Himalaya",
-    quantity: 2,
-    category: "Bebida",
-    price: 2.14
-  },
-  {
-    product: "Flan de coco y piña",
-    description: "No has probado nada igual en tu vida, o sí.",
-    quantity: 2,
-    category: "Postre",
-    price: 3
-  }
+const shoppingList = [
+	{
+		product: "Cereales con chocolate",
+		description: "Cereales rellenos de chocolate",
+		quantity: 2,
+		category: "Cereales",
+		price: 4.5
+	},
+	{
+		product:"Hamburguesa doble con queso y bacon",
+		description: "Hamburguesa rica y saludable #no",
+		quantity: 1,
+		category: "Fast-food",
+		price: 18.95
+	},
+	{
+		product: "Agua mineral",
+		description: "Agua de un charco del Himalaya",
+		quantity: 2,
+		category: "Bebida",
+		price: 2.14
+	},
+	{
+		product: "Flan de coco y piña",
+		description: "No has probado nada igual en tu vida, o sí.",
+		quantity: 2,
+		category: "Postre",
+		price: 3
+	}
 ];
-function paintListHtml(){
-	var list = '';
-	for (var i = 0; i < shoppingList.length; i++) {
-		list += '<li class="elements"><h3 class="product">Producto: ' + shoppingList[i].product + '</h3><p class="price">Precio unitario: ' + shoppingList[i].price + '</p><p class="quantity">Cantidad: ' + shoppingList[i].quantity + '</p><p class="totalprice">Total: <p class="textTotalPrice">' + shoppingList[i].price * shoppingList[i].quantity + '</p></p></li>';
+
+//PINTAR LOS PRODUCTOS Y SUS CARACTERÍSTICAS
+let list = '';
+const paintListHtml = () => {
+	for (const products of shoppingList){
+		list +=
+		`<li class="elements">
+		<h3 class="product">Producto: ${products.product}</h3>
+		<p class="price">Precio unitario: ${products.price}</p>
+		<p class="quantity">Cantidad: ${products.quantity}</p>
+		<h3 class="totalprice">Total: </h3>
+		<p class="textTotalPrice">${products.price * products.quantity}</p>
+		</li>`
 	};
 	shopList.innerHTML = list;
 };
@@ -45,14 +54,14 @@ function paintListHtml(){
 paintListHtml();
 
 
+//PRECIO TOTAL
 
-buttonPrice.addEventListener('click', sumPrice);
-
-
-function sumPrice(){
-	var totalShopping = 0;
-	for (var i = 0; i < shoppingList.length; i++) {
-			totalShopping += shoppingList[i].price * shoppingList[i].quantity;
+const sumPrice = () => {
+	let totalShopping = 0;
+	for (const precioproductos of shoppingList){
+		totalShopping += precioproductos.price * precioproductos.quantity;
 	}
 	resultPrice.innerHTML = totalShopping;
-};
+}
+
+buttonPrice.addEventListener('click', sumPrice);
