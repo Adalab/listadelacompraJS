@@ -40,10 +40,16 @@ let list = '';
 const paintListHtml = () => {
 	for (const products of shoppingList){
 		list +=
-		`<li class="elements"><input type="checkbox">Producto: ${products.product}</input>
+		`<li class="elements">
+		<label for="product">
+			<input type="checkbox" id="product" name="product">
+			Producto: ${products.product}
+		</label>
 		<p class="price">Precio unitario: ${products.price}</p>
 		<p class="quantity-title">Cantidad:</p>
-		<input type="number" value="1" class="quantity"></input>
+		<label for="quantity">
+			<input type="number" value="1" class="quantity" id="quantity" name="quantity"></input>
+		</label>
 		<h3 class="totalprice">Total: </h3>
 		<p class="textTotalPrice">${products.price * products.quantity}</p>
 		</li>`
